@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 //tell mongoose to use javascript's own promise
-mongoose.promise = global.Promise;
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/TodoApp');
 
 var Todo = mongoose.model('Todo', {
@@ -27,7 +27,7 @@ var newTodo = new Todo({
 // });
 
 var otherTodo = new Todo({
-    text: 'Buy clothes',
+    text: 'Harvard C',
     completed: false,
     completedAt: 120
 });
